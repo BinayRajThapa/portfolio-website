@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import Typical from 'react-typical';
+import { Typewriter } from 'react-simple-typewriter';
 
 const Hero = () => {
   return (
@@ -12,20 +12,26 @@ const Hero = () => {
     >
       {/* Left: Text content */}
       <div className="flex-1 text-center md:text-left">
-        <h1 className="text-4xl md:text-6xl font-bold mb-6 text-green-400 font-mono">
-          <Typical
-            steps={[
-              "const name = 'Binaya Raj Thapa';", 1500,
-              "console.log('Full Stack Developer')", 1500,
-              "return <AwesomeCode />;", 1500
+        <h1 className="text-2xl md:text-4xl font-bold mb-6 text-green-400 font-mono leading-relaxed">
+          <Typewriter
+            words={[
+              "const name = 'Binaya Raj Thapa';",
+              "console.log('Full Stack Developer');",
+              'return <AwesomeCode />;',
             ]}
             loop={Infinity}
-            wrapper="span"
+            cursor
+            cursorStyle="_"
+            typeSpeed={50}
+            deleteSpeed={40}
+            delaySpeed={2000}
           />
         </h1>
+
         <p className="text-gray-400 text-lg mb-6 max-w-xl">
           A passionate full-stack developer crafting web solutions with MERN stack, React, and Python.
         </p>
+
         <a
           href="#projects"
           className="inline-block px-6 py-3 bg-green-500 text-white font-semibold rounded-lg shadow-md hover:bg-green-600 transition duration-300"
@@ -36,7 +42,7 @@ const Hero = () => {
 
       {/* Right: Image */}
       <div className="flex-1 mt-10 md:mt-0 flex justify-center">
-        <div className="w-100 h-100 rounded-full overflow-hidden border-4 border-green-400 shadow-lg">
+        <div className="w-64 h-64 rounded-full overflow-hidden border-4 border-green-400 shadow-lg">
           <img
             src="/images/binaya.png"
             alt="Binaya Raj Thapa"
