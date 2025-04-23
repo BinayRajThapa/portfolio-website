@@ -20,6 +20,7 @@
     "react-scroll-to-bottom": "^4.2.0",
     "react-simple-typewriter": "^5.0.1",
     "react-slick": "^0.30.3",
+    "react-type-animation": "^3.2.0",
     "slick-carousel": "^1.8.1",
     "web-vitals": "^2.1.4"
   },

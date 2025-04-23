@@ -6,6 +6,7 @@ import Projects from '../components/Projects';
 import Skills from '../components/Skills';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
+import TerminalFooter from '../components/TerminalFooter'; 
 
 const Home = ({ setShowConfetti }) => {
   return (
@@ -17,6 +18,7 @@ const Home = ({ setShowConfetti }) => {
       <Skills />
       <Contact setShowConfetti={setShowConfetti} />
       <Footer />
+      <TerminalFooter />
     </>
   );
 };
