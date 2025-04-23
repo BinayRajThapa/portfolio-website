@@ -7,7 +7,7 @@ function App() {
   const [showConfetti, setShowConfetti] = useState(false);
 
   return (
-    <div className="font-sans bg-gray-50 text-gray-800">
+    <div className="font-sans bg-[#0d1117] text-[#c9d1d9]"> 
       {showConfetti && <Confetti />}
       <Toaster position="top-right" />
       <Home setShowConfetti={setShowConfetti} />

@@ -16,7 +16,7 @@ const Hero = () => {
           <Typewriter
             words={[
               "const name = 'Binaya Raj Thapa';",
-              "console.log('Full Stack Developer');",
+              "console.log('React Developer');",
               'return <AwesomeCode />;',
             ]}
             loop={Infinity}
@@ -42,7 +42,7 @@ const Hero = () => {
 
       {/* Right: Image */}
       <div className="flex-1 mt-10 md:mt-0 flex justify-center">
-        <div className="w-64 h-64 rounded-full overflow-hidden border-4 border-green-400 shadow-lg">
+        <div className="w-100 h-100 rounded-full overflow-hidden border-4 border-green-400 shadow-lg">
           <img
             src="/images/binaya.png"
             alt="Binaya Raj Thapa"
