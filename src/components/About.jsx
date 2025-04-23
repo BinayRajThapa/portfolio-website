@@ -31,9 +31,9 @@ const About = () => {
         {/* Academic Journey */}
         <motion.div
           variants={cardVariants}
-          className="flex items-start gap-4 bg-[#161b22] p-6 rounded-xl border border-[#30363d] shadow-lg hover:scale-[1.01] transition-transform"
+          className="group flex items-start gap-4 bg-[#161b22] p-6 rounded-xl border border-[#30363d] shadow-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-green-500/30"
         >
-          <div className="bg-green-700 p-4 rounded-full text-white text-3xl">
+          <div className="bg-green-700 p-4 rounded-full text-white text-3xl group-hover:rotate-[6deg] transition-transform duration-300">
             <FaGraduationCap />
           </div>
           <div>
@@ -49,9 +49,9 @@ const About = () => {
         {/* Personal Info */}
         <motion.div
           variants={cardVariants}
-          className="flex items-start gap-4 bg-[#161b22] p-6 rounded-xl border border-[#30363d] shadow-lg hover:scale-[1.01] transition-transform"
+          className="group flex items-start gap-4 bg-[#161b22] p-6 rounded-xl border border-[#30363d] shadow-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-green-500/30"
         >
-          <div className="bg-green-700 p-4 rounded-full text-white text-3xl">
+          <div className="bg-green-700 p-4 rounded-full text-white text-3xl group-hover:rotate-[6deg] transition-transform duration-300">
             <FaUserAlt />
           </div>
           <div>
@@ -67,13 +67,13 @@ const About = () => {
         {/* Passion & Interests */}
         <motion.div
           variants={cardVariants}
-          className="flex items-start gap-4 bg-[#161b22] p-6 rounded-xl border border-[#30363d] shadow-lg hover:scale-[1.01] transition-transform"
+          className="group flex items-start gap-4 bg-[#161b22] p-6 rounded-xl border border-[#30363d] shadow-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-green-500/30"
         >
-          <div className="bg-green-700 p-4 rounded-full text-white text-3xl">
+          <div className="bg-green-700 p-4 rounded-full text-white text-3xl group-hover:rotate-[6deg] transition-transform duration-300">
             <FaLaptopCode />
           </div>
           <div>
-            <h4 className="text-xl font-semibold text-green-300 mb-2">Intrested</h4>
+            <h4 className="text-xl font-semibold text-green-300 mb-2">Interested</h4>
             <ul className="list-disc list-inside text-sm text-gray-300 space-y-1">
               <li>Building full-stack MERN & Python apps</li>
               <li>Exploring AI & Machine Learning concepts</li>
