@@ -5,6 +5,7 @@ import { Typewriter } from 'react-simple-typewriter';
 const Hero = () => {
   return (
     <motion.section
+      id="hero"
       className="min-h-screen flex flex-col md:flex-row items-center justify-center bg-[#0d1117] text-white px-6 py-16"
       initial={{ opacity: 0, y: 40 }}
       animate={{ opacity: 1, y: 0 }}
@@ -29,7 +30,7 @@ const Hero = () => {
         </h1>
 
         <p className="text-gray-400 text-lg mb-6 max-w-xl">
-        Passionate React Developer crafting sleek, modern UIs.
+          Passionate React Developer crafting sleek, modern UIs.
         </p>
 
         <a
