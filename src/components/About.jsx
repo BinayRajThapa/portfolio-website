@@ -28,6 +28,24 @@ const About = () => {
       </div>
 
       <div className="flex flex-col gap-8 max-w-5xl mx-auto">
+         {/* Personal Info */}
+         <motion.div
+          variants={cardVariants}
+          className="group flex items-start gap-4 bg-[#161b22] p-6 rounded-xl border border-[#30363d] shadow-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-green-500/30"
+        >
+          <div className="bg-green-700 p-4 rounded-full text-white text-3xl group-hover:rotate-[6deg] transition-transform duration-300">
+            <FaUserAlt />
+          </div>
+          <div>
+            <h4 className="text-xl font-semibold text-green-300 mb-2">Personal Info</h4>
+            <ul className="list-disc list-inside text-sm text-gray-300 space-y-1">
+              <li>Name: Binaya Raj Thapa</li>
+              <li>Location: Banepa, Nepal</li>
+              <li>Languages: Nepali, English, Hindi, Basic German</li>
+            </ul>
+          </div>
+        </motion.div>
+        
         {/* Academic Journey */}
         <motion.div
           variants={cardVariants}
@@ -46,23 +64,7 @@ const About = () => {
           </div>
         </motion.div>
 
-        {/* Personal Info */}
-        <motion.div
-          variants={cardVariants}
-          className="group flex items-start gap-4 bg-[#161b22] p-6 rounded-xl border border-[#30363d] shadow-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-green-500/30"
-        >
-          <div className="bg-green-700 p-4 rounded-full text-white text-3xl group-hover:rotate-[6deg] transition-transform duration-300">
-            <FaUserAlt />
-          </div>
-          <div>
-            <h4 className="text-xl font-semibold text-green-300 mb-2">Personal Info</h4>
-            <ul className="list-disc list-inside text-sm text-gray-300 space-y-1">
-              <li>Name: Binaya Raj Thapa</li>
-              <li>Location: Banepa, Nepal</li>
-              <li>Languages: Nepali, English, Hindi, Basic German</li>
-            </ul>
-          </div>
-        </motion.div>
+       
 
         {/* Passion & Interests */}
         <motion.div
