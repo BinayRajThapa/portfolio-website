@@ -15,7 +15,7 @@ const Header = () => {
           className="text-2xl font-bold text-green-400 font-mono cursor-pointer"
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         >
-          ➜ binaya
+          binaya
 
 
         </h1>

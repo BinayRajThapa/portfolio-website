@@ -3,16 +3,16 @@ import SkillCard from "./SkillCard";
 import { motion } from "framer-motion";
 
 const skills = [
-  { name: "React.js", icon: "/icons/react.ico", level: 85 },
-  { name: "Node.js", icon: "/icons/node.png", level: 80 },
-  { name: "MongoDB", icon: "/icons/mongoDB.png", level: 75 },
-  { name: "Express.js", icon: "/icons/express.png", level: 72 },
-  { name: "Python", icon: "/icons/python.png", level: 80 },
+  { name: "React.js", icon: "/icons/react.ico", level: 80 },
+  { name: "Node.js", icon: "/icons/node.png", level: 40 },
+  { name: "MongoDB", icon: "/icons/mongoDB.png", level: 50 },
+  { name: "Express.js", icon: "/icons/express.png", level: 70 },
+  { name: "Python", icon: "/icons/python.png", level: 50 },
   { name: "HTML", icon: "/icons/html.png", level: 90 },
   { name: "CSS", icon: "/icons/css.png", level: 88 },
-  { name: "JavaScript", icon: "/icons/javascript.png", level: 87 },
-  { name: "GitHub", icon: "/icons/git.png", level: 83 },
-  { name: "Figma", icon: "/icons/figma.png", level: 70 },
+  { name: "JavaScript", icon: "/icons/javascript.png", level: 80 },
+  { name: "GitHub", icon: "/icons/git.png", level: 85 },
+  { name: "Figma", icon: "/icons/figma.png", level: 60 },
   { name: "Photoshop", icon: "/icons/photoshop.png", level: 50 },
 ];
 
