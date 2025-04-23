@@ -21,10 +21,10 @@ const projects = [
     github: 'https://github.com/BinayRajThapa/BillX.git',
   },
   {
-    title: 'ToDo List App',
+    title: 'Do it Later',
     description: 'A simple and elegant ToDo list app for task tracking.',
     technologies: ['React', 'SCSS/Sass', 'LocalStorage'],
-    github: 'https://github.com/BinayRajThapa/todo-dummy.git',
+    github: 'https://github.com/BinayRajThapa/Do-it-Later.git',
   },
 ];
 

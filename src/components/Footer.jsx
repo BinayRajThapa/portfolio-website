@@ -82,7 +82,7 @@ const Footer = () => {
                 className="flex items-center justify-center px-4 py-2 bg-[#161b22] hover:bg-[#21262d] text-gray-300 text-sm font-medium rounded-md transition-all border border-[#30363d] hover:border-green-500 min-w-[160px]"
               >
                 <FaExternalLinkAlt className="mr-2" />
-                Preview Resume
+                Preview CV
               </a>
             </div>
 
@@ -131,7 +131,7 @@ const Footer = () => {
           <div className="text-center md:text-right space-y-1">
             <p className="text-sm text-gray-400">
               © {new Date().getFullYear()} Built with{" "}
-              <span className="text-red-400">❤️</span> by Binaya
+              <span className="text-red-400">💻</span> by Binaya
             </p>
             <p className="text-xs text-gray-600">
               Powered by <span className="text-blue-400">React</span> &{" "}
