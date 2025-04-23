@@ -29,7 +29,7 @@ const Hero = () => {
         </h1>
 
         <p className="text-gray-400 text-lg mb-6 max-w-xl">
-          A passionate full-stack developer crafting web solutions with MERN stack, React, and Python.
+        React Dev who speaks JSX and thinks in components.
         </p>
 
         <a
