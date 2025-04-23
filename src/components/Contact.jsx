@@ -3,7 +3,7 @@ import emailjs from "emailjs-com";
 import { FaPaperPlane } from "react-icons/fa";
 import toast, { Toaster } from "react-hot-toast";
 import Confetti from "react-confetti";
-import { useWindowSize } from "@uidotdev/usehooks"; // For responsive confetti
+import { useWindowSize } from "@uidotdev/usehooks"; 
 
 const Contact = () => {
   const form = useRef();
@@ -13,26 +13,40 @@ const Contact = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
+
+    const formData = new FormData(form.current);
+    const name = formData.get("name")?.trim();
+    const email = formData.get("email")?.trim();
+    const message = formData.get("message")?.trim();
+
+    // Manual Validation
+    if (!name || !email || !message) {
+      toast.error("Please fill out all fields before sending", {
+        position: "top-center",
+      });
+      return;
+    }
+
     setIsSending(true);
 
     emailjs
       .sendForm(
-        "service_55zmevk",      
-        "template_bicuwbj",      
+        "service_55zmevk",
+        "template_bicuwbj",
         form.current,
-        "Alj31Ct8x_Z8QjqZN"   
+        "Alj31Ct8x_Z8QjqZN"
       )
       .then(
         () => {
           setIsSending(false);
           form.current.reset();
-          toast.success("Message sent successfully!");
+          toast.success("Message sent successfully! 🎉", { position: "top-center" });
           setShowConfetti(true);
           setTimeout(() => setShowConfetti(false), 3000);
         },
         (error) => {
           console.error(error.text);
-          toast.error("Something went wrong!");
+          toast.error("Something went wrong 💥", { position: "top-center" });
           setIsSending(false);
         }
       );
@@ -40,32 +54,43 @@ const Contact = () => {
 
   return (
     <section id="contact" className="bg-[#0d1117] text-white py-16 px-6 relative">
-      <Toaster position="top-right" toastOptions={{ style: { background: "#161b22", color: "white" } }} />
+      <Toaster
+        toastOptions={{
+          style: {
+            background: "#161b22",
+            color: "white",
+          },
+        }}
+      />
       {showConfetti && <Confetti width={size.width} height={size.height} />}
 
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold text-green-400 mb-10 text-center">➜ Contact Me</h2>
+        <h2 className="text-3xl font-bold text-green-400 mb-10 text-center">
+          ➜ Contact Me
+        </h2>
 
-        <form ref={form} onSubmit={sendEmail} className="grid gap-5">
+        <form
+          ref={form}
+          onSubmit={sendEmail}
+          noValidate
+          className="grid gap-5"
+        >
           <input
             type="text"
             name="name"
             placeholder="Your Name"
-            required
             className="p-2 md:p-3 bg-[#161b22] text-white rounded-md border border-gray-700 focus:border-green-500 text-sm md:text-base"
           />
           <input
             type="email"
             name="email"
             placeholder="Your Email"
-            required
             className="p-2 md:p-3 bg-[#161b22] text-white rounded-md border border-gray-700 focus:border-green-500 text-sm md:text-base"
           />
           <textarea
             name="message"
             rows="4"
             placeholder="Your Message"
-            required
             className="p-2 md:p-3 bg-[#161b22] text-white rounded-md border border-gray-700 focus:border-green-500 text-sm md:text-base resize-none"
           ></textarea>
 
