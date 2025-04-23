@@ -24,7 +24,7 @@ const About = () => {
       }}
     >
       <div className="max-w-3xl mx-auto text-center mb-12">
-        <h3 className="text-3xl md:text-4xl font-mono text-green-400">➜ ~ About Me</h3>
+        <h3 className="text-3xl md:text-4xl font-mono text-green-400">➜ About Me</h3>
       </div>
 
       <div className="flex flex-col gap-8 max-w-5xl mx-auto">

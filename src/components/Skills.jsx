@@ -65,7 +65,7 @@ const Skills = () => {
     <section id="skills" className="py-20 bg-[#0d1117] px-4">
       <div className="max-w-6xl mx-auto">
         <h3 className="text-xl md:text-2xl lg:text-3xl font-mono text-green-400 text-center mb-12">
-          ➜ ~ Skills & Tools
+          ➜ Skills & Tools
         </h3>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
