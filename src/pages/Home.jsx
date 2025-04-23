@@ -6,11 +6,12 @@ import Projects from '../components/Projects';
 import Skills from '../components/Skills';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
-import TerminalFooter from '../components/TerminalFooter'; 
+import TerminalFooter from '../components/TerminalFooter';
+import { ThemeProvider } from '../context/ThemeContext'; 
 
 const Home = ({ setShowConfetti }) => {
   return (
-    <>
+    <ThemeProvider>
       <Header />
       <Hero />
       <About />
@@ -19,7 +20,7 @@ const Home = ({ setShowConfetti }) => {
       <Contact setShowConfetti={setShowConfetti} />
       <Footer />
       <TerminalFooter />
-    </>
+    </ThemeProvider>
   );
 };
 
