@@ -73,11 +73,11 @@ const About = () => {
             <FaLaptopCode />
           </div>
           <div>
-            <h4 className="text-xl font-semibold text-green-300 mb-2">What I Love</h4>
+            <h4 className="text-xl font-semibold text-green-300 mb-2">Intrested</h4>
             <ul className="list-disc list-inside text-sm text-gray-300 space-y-1">
               <li>Building full-stack MERN & Python apps</li>
-              <li>Crafting hacker-style UIs with dark themes</li>
-              <li>Diving into AI, ML & coding challenges</li>
+              <li>Exploring AI & Machine Learning concepts</li>
+              <li>Playing football with friends</li>
             </ul>
           </div>
         </motion.div>
