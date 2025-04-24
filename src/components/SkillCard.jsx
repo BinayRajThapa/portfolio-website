@@ -8,7 +8,10 @@ const SkillCard = ({ skill }) => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
       viewport={{ once: true }}
-      className="bg-card p-6 rounded-xl text-text shadow-md hover:shadow-accent/30 hover:scale-[1.03] transition-all duration-300 flex flex-col items-center"
+      className="bg-card p-6 rounded-xl text-text shadow-md transition-all duration-300 flex flex-col items-center
+        hover:scale-[1.03]
+        dark:hover:shadow-[0_0_15px_rgba(0,255,128,0.4)]
+        hover:shadow-[0_0_15px_rgba(0,153,255,0.3)]"
     >
       {/* Icon */}
       <div className="w-16 h-16 flex items-center justify-center rounded-full bg-bg-muted shadow-inner mb-4">

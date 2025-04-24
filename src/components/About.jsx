@@ -25,70 +25,63 @@ const About = () => {
     >
       <div className="max-w-3xl mx-auto text-center mb-12">
         <h1 className="text-3xl font-bold text-accent mb-10 text-center font-mono">
-           ABOUT ME 
+          ABOUT ME
         </h1>
       </div>
 
       <div className="flex flex-col gap-8 max-w-5xl mx-auto">
-        {/* Personal Info */}
-        <motion.div
-          variants={cardVariants}
-          className="group flex items-start gap-4 p-6 rounded-xl border shadow-lg bg-card border-border hover:scale-[1.02] transition-all duration-300 hover:shadow-accent/30"
-        >
-          <div className="p-4 rounded-full text-white text-3xl group-hover:rotate-[6deg] transition-transform duration-300 bg-accent">
-            <FaUserAlt />
-          </div>
-          <div>
-            <h4 className="text-xl font-semibold mb-2 text-accent/80">
-              Personal Info
-            </h4>
-            <ul className="list-disc list-inside text-sm space-y-1 text-text/70">
-              <li>Name: Binaya Raj Thapa</li>
-              <li>Location: Banepa, Nepal</li>
-              <li>Languages: Nepali, English, Hindi, Basic German</li>
-            </ul>
-          </div>
-        </motion.div>
-
-        {/* Academic Journey */}
-        <motion.div
-          variants={cardVariants}
-          className="group flex items-start gap-4 p-6 rounded-xl border shadow-lg bg-card border-border hover:scale-[1.02] transition-all duration-300 hover:shadow-accent/30"
-        >
-          <div className="p-4 rounded-full text-white text-3xl group-hover:rotate-[6deg] transition-transform duration-300 bg-accent">
-            <FaGraduationCap />
-          </div>
-          <div>
-            <h4 className="text-xl font-semibold mb-2 text-accent/80">
-              Academic Journey
-            </h4>
-            <ul className="list-disc list-inside text-sm space-y-1 text-text/70">
-              <li>Secondary: GyanSarovar English Secondary School</li>
-              <li>High School: Banepa NIST</li>
-              <li>BSc. Computer Science, Kathmandu University</li>
-            </ul>
-          </div>
-        </motion.div>
-
-        {/* Passion & Interests */}
-        <motion.div
-          variants={cardVariants}
-          className="group flex items-start gap-4 p-6 rounded-xl border shadow-lg bg-card border-border hover:scale-[1.02] transition-all duration-300 hover:shadow-accent/30"
-        >
-          <div className="p-4 rounded-full text-white text-3xl group-hover:rotate-[6deg] transition-transform duration-300 bg-accent">
-            <FaLaptopCode />
-          </div>
-          <div>
-            <h4 className="text-xl font-semibold mb-2 text-accent/80">
-              What I Love
-            </h4>
-            <ul className="list-disc list-inside text-sm space-y-1 text-text/70">
-              <li>Building full-stack MERN & Python apps</li>
-              <li>Exploring AI & Machine Learning concepts</li>
-              <li>Playing football with friends</li>
-            </ul>
-          </div>
-        </motion.div>
+        {/* Card Template */}
+        {[
+          {
+            icon: <FaUserAlt />,
+            title: 'Personal Info',
+            items: [
+              'Name: Binaya Raj Thapa',
+              'Location: Banepa, Nepal',
+              'Languages: Nepali, English, Hindi, Basic German',
+            ],
+          },
+          {
+            icon: <FaGraduationCap />,
+            title: 'Academic Journey',
+            items: [
+              'Secondary: GyanSarovar English Secondary School',
+              'High School: Banepa NIST',
+              'BSc. Computer Science, Kathmandu University',
+            ],
+          },
+          {
+            icon: <FaLaptopCode />,
+            title: 'What I Love',
+            items: [
+              'Building full-stack MERN & Python apps',
+              'Exploring AI & Machine Learning concepts',
+              'Playing football with friends',
+            ],
+          },
+        ].map((card, idx) => (
+          <motion.div
+            key={idx}
+            variants={cardVariants}
+            className="group flex items-start gap-4 p-6 rounded-xl border border-border bg-card shadow-lg transition-all duration-300 
+              hover:shadow-[0_0_20px_2px_rgba(0,123,255,0.4)] 
+              hover:border-blue-400 
+              dark:hover:shadow-[0_0_20px_2px_rgba(16,255,110,0.6)] 
+              dark:hover:border-green-400"
+          >
+            <div className="p-4 rounded-full text-white text-3xl group-hover:rotate-[6deg] transition-transform duration-300 bg-accent">
+              {card.icon}
+            </div>
+            <div>
+              <h4 className="text-xl font-semibold mb-2 text-accent/80">{card.title}</h4>
+              <ul className="list-disc list-inside text-sm space-y-1 text-text/70">
+                {card.items.map((item, i) => (
+                  <li key={i}>{item}</li>
+                ))}
+              </ul>
+            </div>
+          </motion.div>
+        ))}
       </div>
     </motion.section>
   );
