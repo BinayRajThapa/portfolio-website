@@ -30,36 +30,38 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-20 px-4 bg-[#0d1117] text-[#c9d1d9]">
+    <section id="projects" className="py-20 px-4 bg-bg text-text transition-colors">
       <div className="max-w-6xl mx-auto">
-        <h3 className="text-3xl font-mono text-green-400 text-center mb-16">➜ Projects</h3>
+        <h3 className="text-3xl font-mono text-accent text-center mb-16">➜ Projects</h3>
 
         <div className="grid md:grid-cols-2 gap-10">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-[#161b22] border border-gray-700 rounded-xl p-6 hover:border-green-500 transition duration-300"
+              className="bg-card border border-border rounded-xl p-6 hover:border-accent transition duration-300 shadow-md hover:shadow-accent/30"
             >
-              <h4 className="text-2xl font-bold text-green-400 mb-2">{project.title}</h4>
-              <p className="text-gray-400 mb-4">{project.description}</p>
+              <h4 className="text-2xl font-bold text-accent mb-2">{project.title}</h4>
+              <p className="text-text/70 mb-4">{project.description}</p>
+
               <div className="mb-4">
-                <p className="text-sm text-gray-500 mb-1">Tech Stack:</p>
+                <p className="text-sm text-text/50 mb-1">Tech Stack:</p>
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech, idx) => (
                     <span
                       key={idx}
-                      className="px-3 py-1 bg-gray-800 text-sm text-gray-300 rounded-full"
+                      className="px-3 py-1 bg-bg-muted text-sm text-text/70 rounded-full border border-border/40"
                     >
                       {tech}
                     </span>
                   ))}
                 </div>
               </div>
+
               <a
                 href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center text-green-400 hover:underline"
+                className="inline-flex items-center text-accent hover:underline"
               >
                 <FaGithub className="mr-2" /> GitHub Repository
               </a>

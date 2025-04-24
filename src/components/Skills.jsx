@@ -18,9 +18,9 @@ const skills = [
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-20 bg-[#0d1117] px-4">
+    <section id="skills" className="py-20 px-4 bg-bg text-text transition-colors">
       <div className="max-w-6xl mx-auto">
-        <h3 className="text-xl md:text-2xl lg:text-3xl font-mono text-green-400 text-center mb-12">
+        <h3 className="text-xl md:text-2xl lg:text-3xl font-mono text-accent text-center mb-12">
           ➜ Skills & Tools
         </h3>
 

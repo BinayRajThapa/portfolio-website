@@ -2,35 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
-/* slick-carousel styles */
-@import "~slick-carousel/slick/slick.css";
-@import "~slick-carousel/slick/slick-theme.css";
-
-html {
-  scroll-behavior: smooth;
+/* Light theme by default */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #1f2937;
+  --accent-color: #7c3aed;
+  --card-bg: #f3f4f6;
+  --border-color: #e5e7eb;
 }
 
+/* Dark theme overrides */
+.dark {
+  --bg-color: #0d1117;
+  --text-color: #c9d1d9;
+  --accent-color: #4CAF50;
+  --card-bg: #161b22;
+  --border-color: #30363d;
+}
 
-
-
+/* Optional body styles to reflect theme changes globally */
 body {
-  @apply bg-[#0d1117] text-[#c9d1d9];
-}
-
-
-.clip-hexagon {
-  clip-path: polygon(
-    25% 5%,
-    75% 5%,
-    100% 50%,
-    75% 95%,
-    25% 95%,
-    0% 50%
-  );
-}
-
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }

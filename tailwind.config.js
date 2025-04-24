@@ -8,10 +8,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: '#0d1117',
-        foreground: '#c9d1d9',
-        terminalGreen: '#00FF00',
-        terminalBlack: '#161b22',
+        bg: 'var(--bg-color)',
+        text: 'var(--text-color)',
+        accent: 'var(--accent-color)',
+        card: 'var(--card-bg)',
+        border: 'var(--border-color)',
       },
       fontFamily: {
         mono: ['Fira Code', 'Fira Mono', 'Courier New', 'monospace'],
