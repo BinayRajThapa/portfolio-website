@@ -65,7 +65,7 @@ const Header = () => {
           isOpen ? 'translate-x-0' : 'translate-x-full'
         } z-50 p-6`}
       >
-        <h2 className="text-accent text-xl font-mono mb-6">➜ ~ Menu</h2>
+        <h2 className="text-3xl font-bold text-accent mb-10 text-center font-mono">MENU</h2>
         <ul className="space-y-4">
           <li><a href="#about" onClick={toggleMenu} className="hover:text-accent">About</a></li>
           <li><a href="#projects" onClick={toggleMenu} className="hover:text-accent">Projects</a></li>
