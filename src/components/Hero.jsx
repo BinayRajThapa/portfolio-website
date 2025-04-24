@@ -6,13 +6,24 @@ const Hero = () => {
   return (
     <motion.section
       id="hero"
-      className="min-h-screen flex flex-col md:flex-row items-center justify-center bg-bg text-text px-6 py-16 transition-colors"
+      className="min-h-screen flex flex-col md:flex-row items-center justify-center bg-bg text-text px-6 py-16 transition-colors md:gap-x-0"
       initial={{ opacity: 0, y: 40 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
     >
-      {/* Left: Text content */}
-      <div className="flex-1 text-center md:text-left">
+      {/* Left: Image */}
+      <div className="flex-1 flex justify-center md:mt-[-150px]">
+        <div className="w-90 h-90 md:w-81 md:h-81 rounded-full overflow-hidden shadow-lg">
+          <img
+            src="/images/binaya.png"
+            alt="Binaya Raj Thapa"
+            className="w-full h-full object-cover"
+          />
+        </div>
+      </div>
+
+      {/* Right: Text content */}
+      <div className="flex-1 text-center md:text-left mt-10 md:mt-60">
         <h1 className="text-2xl md:text-4xl font-bold mb-6 text-accent font-mono leading-relaxed">
           <Typewriter
             words={[
@@ -29,7 +40,7 @@ const Hero = () => {
           />
         </h1>
 
-        <p className="text-text/70 text-lg mb-6 max-w-xl">
+        <p className="text-text/70 text-lg mb-6 max-w-xl mx-auto md:mx-0">
           Passionate React Developer crafting sleek, modern UIs.
         </p>
 
@@ -39,17 +50,6 @@ const Hero = () => {
         >
           See My Work
         </a>
-      </div>
-
-      {/* Right: Image */}
-      <div className="flex-1 mt-10 md:mt-0 flex justify-center">
-        <div className="w-80 h-80 rounded-full overflow-hidden border-4 border-accent shadow-lg">
-          <img
-            src="/images/binaya.png"
-            alt="Binaya Raj Thapa"
-            className="w-full h-full object-cover"
-          />
-        </div>
       </div>
     </motion.section>
   );

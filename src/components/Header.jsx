@@ -31,7 +31,10 @@ const Header = () => {
     <>
       <header className="sticky top-0 z-50 bg-bg text-text shadow-md transition-colors">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <a href="#hero" className="text-2xl font-bold text-accent font-mono">Binaya</a>
+        <a href="#hero" className="flex items-center space-x-2">
+        <img src="/images/logo.png" alt="Binaya Logo" className="h-10 w-auto" />
+
+        </a>
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex space-x-6 text-sm font-medium items-center">
