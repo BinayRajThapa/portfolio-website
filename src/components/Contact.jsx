@@ -67,7 +67,7 @@ const Contact = () => {
 
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl font-bold text-accent mb-10 text-center font-mono">
-          ➜ Contact Me
+          CONTACT ME
         </h2>
 
         <form ref={form} onSubmit={sendEmail} noValidate className="grid gap-5">

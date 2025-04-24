@@ -32,7 +32,7 @@ const Projects = () => {
   return (
     <section id="projects" className="py-20 px-4 bg-bg text-text transition-colors">
       <div className="max-w-6xl mx-auto">
-        <h3 className="text-3xl font-mono text-accent text-center mb-16">➜ Projects</h3>
+        <h1 className="text-3xl font-bold text-accent mb-10 text-center font-mono">PROJECTS</h1>
 
         <div className="grid md:grid-cols-2 gap-10">
           {projects.map((project, index) => (

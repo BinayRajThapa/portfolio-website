@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { FiMenu, FiX } from 'react-icons/fi';
 import { BsSunFill, BsMoonStarsFill } from 'react-icons/bs';
 import useDarkMode from '../hooks/useDarkMode';
@@ -6,8 +6,26 @@ import useDarkMode from '../hooks/useDarkMode';
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { theme, toggleTheme } = useDarkMode();
+  const sidebarRef = useRef();
 
   const toggleMenu = () => setIsOpen(!isOpen);
+
+  // Close menu on outside click
+  useEffect(() => {
+    const handleOutsideClick = (e) => {
+      if (sidebarRef.current && !sidebarRef.current.contains(e.target)) {
+        setIsOpen(false);
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener('mousedown', handleOutsideClick);
+    } else {
+      document.removeEventListener('mousedown', handleOutsideClick);
+    }
+
+    return () => document.removeEventListener('mousedown', handleOutsideClick);
+  }, [isOpen]);
 
   return (
     <>
@@ -39,6 +57,7 @@ const Header = () => {
 
       {/* Sidebar */}
       <div
+        ref={sidebarRef}
         className={`fixed top-0 right-0 h-full w-64 bg-card text-text shadow-lg transform transition-transform duration-300 ease-in-out ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         } z-50 p-6`}

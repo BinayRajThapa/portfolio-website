@@ -20,9 +20,9 @@ const Skills = () => {
   return (
     <section id="skills" className="py-20 px-4 bg-bg text-text transition-colors">
       <div className="max-w-6xl mx-auto">
-        <h3 className="text-xl md:text-2xl lg:text-3xl font-mono text-accent text-center mb-12">
-          ➜ Skills & Tools
-        </h3>
+        <h1 className="text-3xl font-bold text-accent mb-10 text-center font-mono">
+          SKILLS AND TOOLS
+        </h1>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {skills.map((skill, index) => (
