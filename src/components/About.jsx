@@ -34,7 +34,7 @@ const About = () => {
         {[
           {
             icon: <FaUserAlt />,
-            title: 'Personal Info',
+            title: 'Personal Information',
             items: [
               'Name: Binaya Raj Thapa',
               'Location: Banepa, Nepal',
@@ -43,20 +43,19 @@ const About = () => {
           },
           {
             icon: <FaGraduationCap />,
-            title: 'Academic Journey',
+            title: 'Education',
             items: [
-              'Secondary: GyanSarovar English Secondary School',
-              'High School: Banepa NIST',
+              'SSC: GyanSarovar English Secondary School',
+              'HSC: Banepa NIST',
               'BSc. Computer Science, Kathmandu University',
             ],
           },
           {
             icon: <FaLaptopCode />,
-            title: 'What I Love',
+            title: 'Intrest',
             items: [
               'Building full-stack MERN & Python apps',
               'Exploring AI & Machine Learning concepts',
-              'Playing football with friends',
             ],
           },
         ].map((card, idx) => (
