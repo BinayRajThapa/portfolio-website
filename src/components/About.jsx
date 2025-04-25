@@ -52,7 +52,7 @@ const About = () => {
           },
           {
             icon: <FaLaptopCode />,
-            title: 'Intrest',
+            title: 'Interests',
             items: [
               'Building full-stack MERN & Python apps',
               'Exploring AI & Machine Learning concepts',

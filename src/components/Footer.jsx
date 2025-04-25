@@ -29,7 +29,7 @@ const Footer = () => {
           <div className="text-center md:text-left space-y-3">
             <h4 className="text-xl font-bold text-accent">Binaya Raj Thapa</h4>
             <p className="text-text-light dark:text-gray-300 text-sm max-w-xs mx-auto md:mx-0">
-              Passionate about React development and solving real-world problems with innovative solutions.
+              React developer by skill, problem solver by mindset, innovator by heart.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 justify-center md:justify-start">

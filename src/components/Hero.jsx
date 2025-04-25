@@ -41,7 +41,7 @@ const Hero = () => {
         </h1>
 
         <p className="text-text/70 text-lg mb-6 max-w-xl mx-auto md:mx-0">
-          Passionate React Developer crafting sleek, modern UIs.
+          Creating with React, learning how Python & ML power tomorrow’s tech.
         </p>
 
         <a
