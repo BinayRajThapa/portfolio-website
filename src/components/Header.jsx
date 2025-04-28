@@ -31,10 +31,22 @@ const Header = () => {
     <>
       <header className="sticky top-0 z-50 bg-bg text-text shadow-md transition-colors">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <a href="#hero" className="flex items-center space-x-2">
-        <img src="/images/logo.png" alt="Binaya Logo" className="h-10 w-auto" />
+          <a href="#hero" className="flex items-center space-x-2 md:mr-auto"> {/* Push mobile buttons to the right */}
+            <img src="/images/logo.png" alt="Binaya Logo" className="h-10 w-auto" />
+          </a>
 
-        </a>
+          <div className="flex items-center space-x-4 md:hidden"> {/* Container for theme toggle and hamburger */}
+            <button
+              onClick={toggleTheme}
+              className="text-xl hover:text-accent transition-all"
+              title="Toggle Theme"
+            >
+              {theme === 'dark' ? <BsSunFill /> : <BsMoonStarsFill />}
+            </button>
+            <button className="text-2xl text-accent" onClick={toggleMenu}>
+              {isOpen ? <FiX /> : <FiMenu />}
+            </button>
+          </div>
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex space-x-6 text-sm font-medium items-center">
@@ -50,11 +62,6 @@ const Header = () => {
               {theme === 'dark' ? <BsSunFill /> : <BsMoonStarsFill />}
             </button>
           </nav>
-
-          {/* Hamburger */}
-          <button className="md:hidden text-2xl text-accent" onClick={toggleMenu}>
-            {isOpen ? <FiX /> : <FiMenu />}
-          </button>
         </div>
       </header>
 
@@ -72,15 +79,6 @@ const Header = () => {
           <li><a href="#skills" onClick={toggleMenu} className="hover:text-accent">Skills</a></li>
           <li><a href="#contact" onClick={toggleMenu} className="hover:text-accent">Contact</a></li>
           <li>
-            <button
-              onClick={() => {
-                toggleTheme();
-                toggleMenu();
-              }}
-              className="mt-4 flex items-center gap-2 hover:text-accent"
-            >
-              {theme === 'dark' ? <BsSunFill /> : <BsMoonStarsFill />} Toggle Theme
-            </button>
           </li>
         </ul>
       </div>
