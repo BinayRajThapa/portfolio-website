@@ -1,6 +1,6 @@
 import React from "react";
 import SkillCard from "./SkillCard";
-import { motion } from "framer-motion";
+
 
 const skills = [
   { name: "React.js", icon: "/icons/react.ico", level: 80 },
@@ -8,12 +8,12 @@ const skills = [
   { name: "MongoDB", icon: "/icons/mongoDB.png", level: 50 },
   { name: "Express.js", icon: "/icons/express.png", level: 60 },
   { name: "Python", icon: "/icons/python.png", level: 60 },
-  { name: "HTML", icon: "/icons/html.png", level: 90 },
-  { name: "CSS", icon: "/icons/css.png", level: 90 },
   { name: "JavaScript", icon: "/icons/javascript.png", level: 80 },
+  { name: "TypeScript", icon: "/icons/typescript.png", level: 70 },
   { name: "GitHub", icon: "/icons/git.png", level: 95 },
   { name: "Figma", icon: "/icons/figma.png", level: 60 },
   { name: "Photoshop", icon: "/icons/photoshop.png", level: 50 },
+
 ];
 
 const Skills = () => {
