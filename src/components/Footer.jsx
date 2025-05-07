@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   FaGithub,
   FaLinkedin,
@@ -7,19 +7,6 @@ import {
 } from "react-icons/fa";
 
 const Footer = () => {
-  const [isDownloading, setIsDownloading] = useState(false);
-
-  const handleDownload = (e) => {
-    e.preventDefault();
-    setIsDownloading(true);
-
-    // Simulate download delay
-    setTimeout(() => {
-      window.open("/documents/Binaya_Thapa_Resume.pdf", "_blank");
-      setIsDownloading(false);
-    }, 800);
-  };
-
   return (
     <footer className="bg-bg text-text py-12 px-6 border-t border-border">
       <div className="max-w-7xl mx-auto">
@@ -29,7 +16,7 @@ const Footer = () => {
           <div className="text-center md:text-left space-y-3">
             <h4 className="text-xl font-bold text-accent">Binaya Raj Thapa</h4>
             <p className="text-text-light dark:text-gray-300 text-sm max-w-xs mx-auto md:mx-0">
-              React developer by skill, problem solver by mindset, innovator by heart.
+              React developer diving deep into Python, AI & ML innovations.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
